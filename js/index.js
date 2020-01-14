@@ -40,3 +40,73 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav
+const headerNav = document.querySelectorAll('a');
+headerNav[0].textContent = siteContent.nav['nav-item-1']
+headerNav[1].textContent = siteContent.nav['nav-item-2']
+headerNav[2].textContent = siteContent.nav['nav-item-3']
+headerNav[3].textContent = siteContent.nav['nav-item-4']
+headerNav[4].textContent = siteContent.nav['nav-item-5']
+headerNav[5].textContent = siteContent.nav['nav-item-6']
+headerNav.forEach(element => {
+  element.style.color = "black";
+})
+
+const navBox = document.querySelector('nav')
+
+const newLink1 = document.createElement('a')
+newLink1.textContent = 'Test1'
+
+navBox.prepend(newLink1)
+
+const newLink2 = document.createElement('a')
+newLink2.textContent = 'Test2'
+
+navBox.appendChild(newLink2)
+
+
+newLink1.style.color = "red"
+newLink2.style.color = "red"
+
+const newH1 = document.querySelector('h1')
+newH1.textContent = siteContent.cta['h1'] 
+
+const button = document.querySelector('button')
+button.textContent = siteContent.cta['button']
+
+const newCtaImg = document.querySelector('#cta-img')
+newCtaImg.src = siteContent.cta['img-src']
+
+const newH4 = document.querySelectorAll('h4')
+newH4[0].textContent = siteContent['main-content']['features-h4']
+newH4[1].textContent = siteContent['main-content']['about-h4']
+newH4[2].textContent = siteContent['main-content']['services-h4']
+newH4[3].textContent = siteContent['main-content']['product-h4']
+newH4[4].textContent = siteContent['main-content']['vision-h4']
+newH4[5].textContent = siteContent['contact']['contact-h4']
+
+const newMiddleimg = document.querySelector('.middle-img')
+newMiddleimg.src = siteContent['main-content']['middle-img-src']
+
+const mainP = document.querySelectorAll('p')
+mainP[0].textContent = siteContent['main-content']['features-content']
+mainP[1].textContent = siteContent['main-content']["about-content"]
+mainP[2].textContent = siteContent['main-content']["services-content"]
+mainP[3].textContent = siteContent['main-content'][ "product-content"]
+mainP[4].textContent = siteContent['main-content']["vision-content"]
+mainP[5].textContent = siteContent['contact']['address']
+mainP[6].textContent = siteContent['contact']['phone']
+mainP[7].textContent = siteContent['contact']['email']
+mainP[8].textContent = siteContent['footer']['copyright']
+
+
+//Stretch
+let ctaSelect = document.querySelector('*');
+let actionBtn = document.createElement('button');
+actionBtn.textContent = 'Turn Background to Green';
+ctaSelect.prepend(actionBtn);
+
+actionBtn.addEventListener('click', function(){
+  return ctaSelect.style = 'background-color:green';
+});
